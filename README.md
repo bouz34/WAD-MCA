@@ -26,7 +26,7 @@ WAD-MCA v1.0 is a **multi-class labeled web attack dataset** rigorously construc
 | [MACCDC 2012 http.log](http://www.secrepo.com/) | Non-redundant paths | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |  
 | [payloads-master](https://github.com/foospidy/payloads) | Attack variants for payload substitution | *Unknown (Use with caution)* |  
 | [Malicious URL Dataset](https://github.com/faizann24/Using-machine-learning-to-detect-malicious-URLs) | Expansion of normal URL samples | [MIT License](https://github.com/faizann24/Using-machine-learning-to-detect-malicious-URLs/blob/master/LICENSE) |  
-| [WebAttack-CVSSMetrics](https://huggingface.co/datasets/chYassine/WebAttack-CVSSMetrics) | SQLi/CMDi samples | [CC BY 4.0](https://huggingface.co/datasets/chYassine/WebAttack-CVSSMetrics/blob/main/README.md) |  
+| [WebAttack-CVSSMetrics](https://huggingface.co/datasets/chYassine/WebAttack-CVSSMetrics) | Expansion of SQL Injection/Command Injection samples | [CC BY 4.0](https://huggingface.co/datasets/chYassine/WebAttack-CVSSMetrics/blob/main/README.md) |  
 
 ### Key Technical Operations  
 1. **Payload Isolation**  
