@@ -15,7 +15,7 @@
 WAD-MCA v1.0 is a **multi-class labeled web attack dataset** rigorously constructed from 5 authoritative sources. It provides:  
 - ✅ **10,622 precisely annotated samples** (8,483 attacks + 2,139 normal)  
 - ✅ **Fine-grained payload isolation** with exact boundary markers  
-- ✅ **Natural non-balanced distribution** reflecting real-world attack patterns  
+- ✅ **Natural imbalanced distribution** reflecting real-world attack patterns  
 - ✅ **Enhanced path diversity** with 9,127 unique URL paths  
 
 ## 🔧 Construction Methodology  
@@ -23,10 +23,10 @@ WAD-MCA v1.0 is a **multi-class labeled web attack dataset** rigorously construc
 | **Source** | **Contribution** | **License** |  
 |------------|------------------|-------------|  
 | [HTTP CSIC 2010](http://www.isi.csic.es/dataset/) | Base attack traffic with URL payloads | [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) |  
-| [MACCDC 2012 http.log](http://www.secrepo.com/) | 8,483 non-redundant paths & contexts | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |  
+| [MACCDC 2012 http.log](http://www.secrepo.com/) | Non-redundant paths | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |  
 | [payloads-master](https://github.com/foospidy/payloads) | Attack variants for payload substitution | *Unknown (Use with caution)* |  
-| [Malicious URL Dataset](https://github.com/faizann24/Using-machine-learning-to-detect-malicious-URLs) | Normal URL expansion | [MIT License](https://github.com/faizann24/Using-machine-learning-to-detect-malicious-URLs/blob/master/LICENSE) |  
-| [WebAttack-CVSSMetrics](https://huggingface.co/datasets/chYassine/WebAttack-CVSSMetrics) | SQLi/CMDi prototype samples | [CC BY 4.0](https://huggingface.co/datasets/chYassine/WebAttack-CVSSMetrics/blob/main/README.md) |  
+| [Malicious URL Dataset](https://github.com/faizann24/Using-machine-learning-to-detect-malicious-URLs) | Expansion of normal URL samples | [MIT License](https://github.com/faizann24/Using-machine-learning-to-detect-malicious-URLs/blob/master/LICENSE) |  
+| [WebAttack-CVSSMetrics](https://huggingface.co/datasets/chYassine/WebAttack-CVSSMetrics) | SQLi/CMDi samples | [CC BY 4.0](https://huggingface.co/datasets/chYassine/WebAttack-CVSSMetrics/blob/main/README.md) |  
 
 ### Key Technical Operations  
 1. **Payload Isolation**  
@@ -56,8 +56,8 @@ WAD-MCA v1.0 is a **multi-class labeled web attack dataset** rigorously construc
 ### Field Definitions  
 | **Field** | **Description** | **Example** |  
 |-----------|-----------------|-------------|  
-| `url` | Full URL with parameters | `/search?q=<script>alert()</script>` |  
-| `attack_type` | One of 5 classes (exact match to Table I) | `"Path Traversal"` |  
+| `url` | URL path with parameters | `/search?q=<script>alert()</script>` |  
+| `attack_type` | One of 5 classes | `"Path Traversal"` |  
 | `payload` | Malicious substring in parameters | `"../../etc/passwd"` |  
 
 > ⚠️ **Note**: Normal samples have `"attack_type": "Normal"` and `"payload": null`  
